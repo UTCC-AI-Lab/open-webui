@@ -26,6 +26,10 @@ ARG BUILD_HASH
 
 WORKDIR /app
 
+# Add a volume for development
+VOLUME /app/node_modules
+VOLUME /app
+
 ENV NODE_OPTIONS="--max-old-space-size=8192"
 
 COPY package.json package-lock.json ./
